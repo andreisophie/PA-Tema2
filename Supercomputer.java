@@ -70,7 +70,6 @@ public class Supercomputer {
 				PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(
 								OUTPUT_FILE)));
 				pw.println(answer);
-				System.out.println(answer);
 				pw.close();
 			} catch (IOException e) {
 				throw new RuntimeException(e);

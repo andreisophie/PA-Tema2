@@ -42,11 +42,11 @@ Folosesc mai multe parcurgeri DFS (si parcurgeri BFS ar merge) ale grafului ca s
 
 > Complexitatea solutiei: `O(N^2 + E)`; N = nr de noduri, E = nr de muchii
 
-## Problema 3 - 
+## Problema 3 - Teleportare
 
+Solutia la aceasta problema nu este neaparat corecta, doar ca exista cateva teste in care nu este nevoie sa folosim teleportarea. In aceste teste putem aplica algoritmul lui Dijkstra (sau orice alt algoritm de cel mai scurt drum) pentru a gasi raspunsul problemei. Algoritmul lui Dijkstra este cel scris la laboratorul 8.
 
-
-> Complexitatea solutiei: `O()`
+> Complexitatea solutiei: `O(E * log(N))`; N = nr de noduri, E = nr de muchii
 
 ## Problema 4 - Magazin
 
