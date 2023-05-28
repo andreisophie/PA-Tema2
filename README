@@ -30,11 +30,17 @@ Este nevoie sa aplic algoritmul de mai sus de 2 ori pe fiecare graf, ca sa teste
     
 > Complexitatea solutiei: `O(N + E)`; N = nr de noduri, E = nr de muchii (complexitatea solutiei este complexitatea alg lui Khan, deoarece utilizarea cozii nu mareste in niciun fel complexitatea).
 
-##  Problema 2 - 
+##  Problema 2 - Ferate
 
+Soluția este inspirata de [aici](https://www.geeksforgeeks.org/minimum-edges-to-be-added-in-a-directed-graph-so-that-any-node-can-be-reachable-from-a-given-node/).
 
+Folosesc mai multe parcurgeri DFS (si parcurgeri BFS ar merge) ale grafului ca sa gasesc nodurile accesibile, respectiv inaccesibile din graf, astfel:
 
-> Complexitatea solutiei: `O()`
+- Realizez o parcurgere a grafului pornind din gara principala data de problema pentru a gasi ce noduri sunt accesibile deja, si le marchez ca atare
+- Pentru fiecare dintre celelalte noduri ma intereseaza cate noduri inaccesibile direct de la sursa as putea accesa daca as construi un drum de la sursa la nodul respectiv; pentru a determina aceasta valoare realizez o parcurgere DFS pornind din fiecare nod nevizitat si tin minte numarul de noduri accesibile din fiecare nod
+- Sortez descrescator lista creata la pasul anterior si folosesc o abordare greedy pentru a determina numarul minim de muchii ce trebuie adaugate: adaug muchie de la sursa catre nodul cu numar maxim de noduri care pot fi vizitate din el, marchez toate nodurile noi ca fiind vizitabile din sursa si continui algoritmul pana cand pot vizita toate nodurile.
+
+> Complexitatea solutiei: `O(N^2 + E)`; N = nr de noduri, E = nr de muchii
 
 ## Problema 3 - 
 
